@@ -1,161 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
-    <title>TotaHosting</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo">TotaHosting</a>
-            <input type="checkbox" id="menu" />
-            <label for="menu"></label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#" id="login-link">Iniciar Sesión</a></li>
-                    <li><a href="https://wa.me/59176317233">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+        <title>TotaHosting</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu container">
+                <a href="#" class="logo">TotaHosting</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu"></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Iniciar sesion</a></li>
+                        <li><a href="https://wa.me/59176317233">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-content container">
+                <h1>Quienes somos? </h1>
+                <p>TotaHosting nació gracias al deseo de brindar un servicio dedicado, ya que como administradores 
+                    de Networks estábamos cansados del mal soporte y la incomodidad de usar Google traductor 
+                    para comunicarnos con el soporté en Inglés. Nuestro Objetivo es que todo sea Facil en la atención, 
+                    Facil en la administración de servidores, Facil para adquirir un nuevo servidor! Alguna duda? 
+                    Nuestra equipo de Staff le atenderá por medio de chat online.</p>
+            </div>
+        </header>
 
-    <section class="Host">
-        <div class="Host-Content container">
-            <h2>Tipos de Host</h2>
-            <p class="txt-p">A continuación están los tipos de planes disponibles</p>
-            <div class="Host-Group">
-                <div class="Host-1">
-                    <img src="images/Dirt.png" alt="">
-                    <h3>Plan Tierra</h3>
-                    <p>
-                        <ul>
-                            <li>2 Cores</li>
-                            <li>2-6GB de RAM</li>
-                            <li>16GB de espacio</li>
-                        </ul>
-                    </p>
-                    <button class="buy-btn" onclick="handleBuy()">1.66 $</button>
-                </div>
-                <div class="Host-1">
-                    <img src="images/Grass_Block_JE7_BE6.png" alt="">
-                    <h3>Plan Pasto</h3>
-                    <p>
-                        <ul>
-                            <li>4 Cores</li>
-                            <li>4-8GB de RAM</li>
-                            <li>20GB de espacio</li>
-                        </ul>
-                    </p>
-                    <button class="buy-btn" onclick="handleBuy()">2.99 $</button>
-                </div>
-                <div class="Host-1">
-                    <img src="images/Piedra.png" alt="">
-                    <h3>Plan Piedra</h3>
-                    <p>
-                        <ul>
-                            <li>4 Cores</li>
-                            <li>6-10GB de RAM</li>
-                            <li>32GB de espacio</li>
-                        </ul>
-                    </p>
-                    <button class="buy-btn" onclick="handleBuy()">4.99 $</button>
+        <section class="Host">
+            <div class="Host-Content container">
+                <h2>Tipos de Host</h2>
+                <p class="txt-p">A continuación están los tipos de planes disponibles</p>
+                <div class="Host-Group">
+                    <div class="Host-1">
+                        <img src="images/Dirt.png" alt="">
+                        <h3>Plan Tierra</h3>
+                        <p>
+                            <ul>
+                                <li>2 Cores</li>
+                                <li>2-6GB de RAM</li>
+                                <li>16GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">1.66 $</button>
+                    </div>
+                    <div class="Host-1">
+                        <img src="images/Grass_Block_JE7_BE6.png" alt="">
+                        <h3>Plan Pasto</h3>
+                        <p>
+                            <ul>
+                                <li>4 Cores</li>
+                                <li>4-8GB de RAM</li>
+                                <li>20GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">2.99 $</button>
+                    </div>
+                    <div class="Host-1">
+                        <img src="images/Piedra.png" alt="">
+                        <h3>Plan Piedra</h3>
+                        <p>
+                            <ul>
+                                <li>4 Cores</li>
+                                <li>6-10GB de RAM</li>
+                                <li>32GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">4.99 $</button>
+                    </div>
                 </div>
             </div>
+        </section>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+                <h2>Formulario de Compra</h2>
+                <form>
+                    <label for="name">Nombre:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
         </div>
-    </section>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeModalBtn">&times;</span>
-            <h2>Formulario de Compra</h2>
-            <form>
-                <label for="name">Nombre:</label><br>
-                <input type="text" id="name" name="name"><br><br>
+        <script>
+            var modal = document.getElementById("myModal");
+            var closeBtn = document.getElementById("closeModalBtn");
 
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email"><br><br>
+            function openModal() {
+                modal.style.display = "block";
+            }
 
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </div>
-
-    <div id="loginModal" class="modal-login">
-        <div class="modal-content-login">
-            <span class="close-btn-login" id="closeLoginModal">&times;</span>
-            <h2>Iniciar Sesión</h2>
-            <form id="loginForm">
-                <label for="username">Usuario:</label><br>
-                <input type="text" id="username" name="username" required><br><br>
-
-                <label for="password">Contraseña:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
-
-                <input type="submit" value="Iniciar Sesión">
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Variables del modal de compra
-        var modal = document.getElementById("myModal");
-        var closeBtn = document.getElementById("closeModalBtn");
-
-        // Variables del modal de inicio de sesión
-        var loginModal = document.getElementById("loginModal");
-        var closeLoginModal = document.getElementById("closeLoginModal");
-        var loginLink = document.getElementById("login-link");
-
-        // Abrir el modal de inicio de sesión
-        loginLink.onclick = function() {
-            loginModal.style.display = "block";
-        };
-
-        // Cerrar el modal de inicio de sesión
-        closeLoginModal.onclick = function() {
-            loginModal.style.display = "none";
-        };
-
-        // Cerrar el modal de compra
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        // Cerrar cualquier modal si se hace clic fuera de los contenidos
-        window.onclick = function(event) {
-            if (event.target == modal) {
+            closeBtn.onclick = function() {
                 modal.style.display = "none";
-            } else if (event.target == loginModal) {
-                loginModal.style.display = "none";
             }
-        };
-        function handleBuy() {
-            if (localStorage.getItem('loggedIn') === 'true') {
-                openModal();
-            } else {
-                alert('Debe iniciar sesión para realizar la compra.');
-            }
-        }
 
-        document.getElementById('loginForm').onsubmit = function(event) {
-            event.preventDefault();
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-
-            if (username === 'admin' && password === '1234') { 
-                localStorage.setItem('loggedIn', 'true');
-                loginModal.style.display = 'none';
-                alert('Inicio de sesión exitoso');
-            } else {
-                alert('Credenciales incorrectas');
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-        };
-        function openModal() {
-            modal.style.display = "block";
-        }
-    </script>
-</body>
+        </script>
+
+    </body>
 </html>
