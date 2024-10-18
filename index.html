@@ -67,7 +67,6 @@
         </div>
     </section>
 
-    <!-- Modal de Compra -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeModalBtn">&times;</span>
@@ -84,24 +83,55 @@
         </div>
     </div>
 
+    <div id="loginModal" class="modal-login">
+        <div class="modal-content-login">
+            <span class="close-btn-login" id="closeLoginModal">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <label for="username">Usuario:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <input type="submit" value="Iniciar Sesión">
+            </form>
+        </div>
+    </div>
+
     <script>
         // Variables del modal de compra
         var modal = document.getElementById("myModal");
         var closeBtn = document.getElementById("closeModalBtn");
+
+        // Variables del modal de inicio de sesión
+        var loginModal = document.getElementById("loginModal");
+        var closeLoginModal = document.getElementById("closeLoginModal");
+        var loginLink = document.getElementById("login-link");
+
+        // Abrir el modal de inicio de sesión
+        loginLink.onclick = function() {
+            loginModal.style.display = "block";
+        };
+
+        // Cerrar el modal de inicio de sesión
+        closeLoginModal.onclick = function() {
+            loginModal.style.display = "none";
+        };
 
         // Cerrar el modal de compra
         closeBtn.onclick = function() {
             modal.style.display = "none";
         };
 
-        // Cerrar cualquier modal si se hace clic fuera del contenido
+        // Cerrar cualquier modal si se hace clic fuera de los contenidos
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+            } else if (event.target == loginModal) {
+                loginModal.style.display = "none";
             }
         };
-
-        // Función de manejo de la compra
         function handleBuy() {
             if (localStorage.getItem('loggedIn') === 'true') {
                 openModal();
@@ -110,24 +140,19 @@
             }
         }
 
-        // Función de inicio de sesión con ventana emergente
-        document.getElementById('login-link').onclick = function(event) {
-            event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+        document.getElementById('loginForm').onsubmit = function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
-            // Pedir credenciales mediante ventanas emergentes
-            var username = prompt("Ingrese su usuario:");
-            var password = prompt("Ingrese su contraseña:");
-
-            // Simulación de validación de usuario
-            if (username === 'admin' && password === '1234') {  // Credenciales simuladas
+            if (username === 'admin' && password === '1234') { 
                 localStorage.setItem('loggedIn', 'true');
+                loginModal.style.display = 'none';
                 alert('Inicio de sesión exitoso');
             } else {
                 alert('Credenciales incorrectas');
             }
         };
-
-        // Abrir el modal de compra
         function openModal() {
             modal.style.display = "block";
         }
