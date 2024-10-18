@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+        <title>TotaHosting</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu container">
+                <a href="#" class="logo">TotaHosting</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu"></label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servers</a></li>
+                        <li><a href="https://wa.me/59176317233">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="Host">
+            <div class="Host-Content container">
+                <h2>Tipos de Host</h2>
+                <p class="txt-p">A continuación están los tipos de planes disponibles</p>
+                <div class="Host-Group">
+                    <div class="Host-1">
+                        <img src="images/Dirt.png" alt="">
+                        <h3>Plan Tierra</h3>
+                        <p>
+                            <ul>
+                                <li>2 Cores</li>
+                                <li>2-6GB de RAM</li>
+                                <li>16GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">1.66 $</button>
+                    </div>
+                    <div class="Host-1">
+                        <img src="images/Grass_Block_JE7_BE6.png" alt="">
+                        <h3>Plan Pasto</h3>
+                        <p>
+                            <ul>
+                                <li>4 Cores</li>
+                                <li>4-8GB de RAM</li>
+                                <li>20GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">2.99 $</button>
+                    </div>
+                    <div class="Host-1">
+                        <img src="images/Piedra.png" alt="">
+                        <h3>Plan Piedra</h3>
+                        <p>
+                            <ul>
+                                <li>4 Cores</li>
+                                <li>6-10GB de RAM</li>
+                                <li>32GB de espacio</li>
+                            </ul>
+                        </p>
+                        <button class="buy-btn" onclick="openModal()">4.99 $</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+                <h2>Formulario de Compra</h2>
+                <form>
+                    <label for="name">Nombre:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // Obtener los elementos del DOM
+            var modal = document.getElementById("myModal");
+            var closeBtn = document.getElementById("closeModalBtn");
+
+            // Función para abrir el modal
+            function openModal() {
+                modal.style.display = "block";
+            }
+
+            // Función para cerrar el modal
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Cerrar el modal si se hace clic fuera del contenido
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+</html>
