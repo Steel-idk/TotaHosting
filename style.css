@@ -176,3 +176,26 @@ body {
                 text-decoration: none;
                 cursor: pointer;
             }
+.modal-login {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+.modal-content-login {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+.close-btn-login {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
