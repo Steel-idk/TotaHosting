@@ -92,7 +92,7 @@ body {
     background-image: linear-gradient(
         rgba(247, 247, 247, 0.123),
         rgba(247, 238, 238, 0.123)
-    ), url(images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    );
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
