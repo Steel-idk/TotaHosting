@@ -17,7 +17,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.3),
         rgba(0,0,0,0.3)
-    ), url(images/wallpaperflare.com_wallpaper.jpg);
+    ), url(images/wallpaperflare.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     min-width: 70vh;
@@ -62,3 +62,123 @@ body {
     cursor: pointer;
     display: none;
 }
+.bth-1{
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #00000079;
+    color: #ffffff;
+}
+.bth-1:hover{
+    color: #7f14b1;
+}
+.Host{
+    background-image: linear-gradient(
+        rgba(247, 247, 247, 0.123),
+        rgba(247, 238, 238, 0.123)
+    );
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #00000080;
+    position: relative;
+}
+.Host-Content{
+    text-align: center;
+}
+.Host-Content h2{
+    font-size: 55px;
+    line-height: 75px;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+.txt-p{
+    font-size: 16px;
+    color: #0a0909;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+.Host-Group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.Host-1{
+    padding: 0 25px;
+}
+.Host-1 img{
+    width: 200px;
+}
+.Host-1 h3{
+    color: #0a0909;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+}
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-btn:hover,
+            .close-btn:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+.modal-login {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+.modal-content-login {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+.close-btn-login {
+            float: right;
+            cursor: pointer;
+            font-size: 20px;
+        }
