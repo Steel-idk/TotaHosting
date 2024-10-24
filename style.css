@@ -62,7 +62,7 @@ body {
     cursor: pointer;
     display: none;
 }
-.Host{
+.host{
     background-image: linear-gradient(
         rgba(247, 247, 247, 0.123),
         rgba(247, 238, 238, 0.123)
