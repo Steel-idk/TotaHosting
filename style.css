@@ -38,19 +38,36 @@ body {
     font-size: 25px;
     font-weight: 800; 
 }
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.dropdownmenu ul, .dropdownmenu li {
+	margin: 0;
+	padding: 0;
 }
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #ffffff;
-    display: block;
-    font-weight: 600;
+.dropdownmenu ul {
+	background: gray;
+	list-style: none;
+	width: 100%;
 }
-.menu .navbar ul li a:hover {
-    color: #7f14b1;
+.dropdownmenu li {
+	float: left;
+	position: relative;
+	width:auto;
+}
+.dropdownmenu a {
+	background: #30A6E6;
+	color: #FFFFFF;
+	display: block;
+	font: bold 12px/20px sans-serif;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+.dropdownmenu li:hover a {
+	background: #000000;
 }
 #menu {
     display: none;
