@@ -17,7 +17,7 @@ body {
     background-image: linear-gradient(
         rgba(0,0,0,0.3),
         rgba(0,0,0,0.3)
-    ), url(images/wallpaperflare.com_wallpaper.jpg);
+    ), url(images/wallpaperflare.jpg);
     background-position: center bottom;
     background-repeat: no-repeat;
     min-width: 70vh;
@@ -78,15 +78,6 @@ body {
     color: #ffffff;
     padding: 0 250px;
     margin-bottom: 50px;
-}
-.bth-1{
-    display: inline-block;
-    padding: 11px 25px;
-    background-color: #00000079;
-    color: #ffffff;
-}
-.bth-1:hover{
-    color: #7f14b1;
 }
 .Host{
     background-image: linear-gradient(
