@@ -36,7 +36,7 @@ body {
 .logo{
     color: #ffffff;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 800; 
 }
 .menu .navbar ul li {
     position: relative;
